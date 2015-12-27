@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinFu.DynamicProxy.Samples", "LinFu.DynamicProxy.Samples\LinFu.DynamicProxy.Samples.csproj", "{29CB2FC8-8A0F-4B7F-AC14-E551BCD87A29}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinFu.DynamicProxy", "..\LinFu.DynamicProxy\LinFu.DynamicProxy.csproj", "{859EF99C-D959-4485-B24E-05AEAB9B54CF}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinFu.DynamicProxy.Benchmarks", "..\LinFu.DynamicProxy.Benchmarks\LinFu.DynamicProxy.Benchmarks\LinFu.DynamicProxy.Benchmarks.csproj", "{C4D4FFFD-6BFA-4A10-841D-EA0E602FB60A}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Castle.DynamicProxy-vs2005", "..\Castle.DynamicProxy.Uncached\Castle.DynamicProxy-vs2005.csproj", "{2DE7CC8C-6F06-43BC-A7B6-9466BEDEAC28}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{29CB2FC8-8A0F-4B7F-AC14-E551BCD87A29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29CB2FC8-8A0F-4B7F-AC14-E551BCD87A29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29CB2FC8-8A0F-4B7F-AC14-E551BCD87A29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29CB2FC8-8A0F-4B7F-AC14-E551BCD87A29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{859EF99C-D959-4485-B24E-05AEAB9B54CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{859EF99C-D959-4485-B24E-05AEAB9B54CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{859EF99C-D959-4485-B24E-05AEAB9B54CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{859EF99C-D959-4485-B24E-05AEAB9B54CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4D4FFFD-6BFA-4A10-841D-EA0E602FB60A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4D4FFFD-6BFA-4A10-841D-EA0E602FB60A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4D4FFFD-6BFA-4A10-841D-EA0E602FB60A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4D4FFFD-6BFA-4A10-841D-EA0E602FB60A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DE7CC8C-6F06-43BC-A7B6-9466BEDEAC28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DE7CC8C-6F06-43BC-A7B6-9466BEDEAC28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DE7CC8C-6F06-43BC-A7B6-9466BEDEAC28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DE7CC8C-6F06-43BC-A7B6-9466BEDEAC28}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

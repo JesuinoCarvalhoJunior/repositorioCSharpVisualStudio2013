@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmls="urn:nhibernate-mapping-2.2"
+                   assembly="ProjetoNHibernate.Entidades"
+                   namespace="ProjetoNHibernate.Entidades">
+  <class nome="Usuario">
+    <id name="Id">
+      <generator class="identity"/>
+    </id>
+    <property name="Nome"/>
+  </class>
+</hibernate-mapping>

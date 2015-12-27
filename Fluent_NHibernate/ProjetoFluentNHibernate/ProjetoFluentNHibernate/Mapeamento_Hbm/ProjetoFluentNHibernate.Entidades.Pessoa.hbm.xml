@@ -1,0 +1,65 @@
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <class xmlns="urn:nhibernate-mapping-2.2" name="ProjetoFluentNHibernate.Entidades.Pessoa, ProjetoFluentNHibernate, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="`Pessoa`">
+    <id name="Codigo" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="Codigo" />
+      <generator class="identity" />
+    </id>
+    <bag name="Grupos" table="GruposToPessoa">
+      <key>
+        <column name="Pessoa_id" />
+      </key>
+      <many-to-many class="ProjetoFluentNHibernate.Entidades.Grupo, ProjetoFluentNHibernate, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <column name="Grupo_id" />
+      </many-to-many>
+    </bag>
+    <bag cascade="all" name="Telefones">
+      <key>
+        <column name="Pessoa_id" />
+      </key>
+      <one-to-many class="ProjetoFluentNHibernate.Entidades.Telefone, ProjetoFluentNHibernate, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+    </bag>
+    <property name="Nome" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="Nome" length="80" not-null="true" />
+    </property>
+    <property name="Endereco" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="Endereco" length="100" />
+    </property>
+    <property name="Cep" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="Cep" length="10" />
+    </property>
+    <property name="Email" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="Email" length="100" />
+    </property>
+    <property name="DataCadastro" type="System.DateTime, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="DataCadastro" not-null="true" />
+    </property>
+    <property name="Status" type="Int32">
+      <column name="Status" />
+    </property>
+    <many-to-one class="ProjetoFluentNHibernate.Entidades.Departamento, ProjetoFluentNHibernate, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Departamento">
+      <column name="Departamento_id" not-null="true" />
+    </many-to-one>
+    <joined-subclass name="ProjetoFluentNHibernate.Entidades.PessoaFisica, ProjetoFluentNHibernate, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="`PessoaFisica`">
+      <key>
+        <column name="Pessoa_id" />
+      </key>
+      <property name="Cpf" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+        <column name="Cpf" length="14" not-null="true" />
+      </property>
+      <property name="Nacionalidade" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+        <column name="Nacionalidade" length="30" />
+      </property>
+    </joined-subclass>
+    <joined-subclass name="ProjetoFluentNHibernate.Entidades.PessoaJuridica, ProjetoFluentNHibernate, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="`PessoaJuridica`">
+      <key>
+        <column name="Pessoa_id" />
+      </key>
+      <property name="Cnpj" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+        <column name="Cnpj" length="18" not-null="true" />
+      </property>
+      <property name="WebSite" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+        <column name="WebSite" length="100" />
+      </property>
+    </joined-subclass>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Loja"
+                   namespace="Loja.Entidades">
+  <class name="Categoria">
+    <!-- cacheando a classe categoria-->
+    <!--read-only = nao permite qe o cache seja modificado -->
+    <!--read-write = permite qe o cache seja modificado detro de LOCKS em todas alteracoes porem = baixa performance-->
+    <!--nonstrict-read-write = permite qe o cache seja modificado porem com bem nos LOCKS-->
+    <cache usage="nonstrict-read-write"/>
+    <id name="Id">
+      <generator class="identity"/>
+    </id>
+    <property name="Nome"/>
+
+    <!-- ########################## mapear lista ########################## -->
+    <!--Busca Lazy do Hibernate-->
+    <!--<bag name="Produtos"> -->
+
+    <!--atributo fetch aceita 2 valores, sendo 1 =  "Select" = Lazy e outro "Join" = Eager-->
+    <!-- batch-size limita em 10 os retorno de categoria no select-->
+    <bag name="Produtos"  fetch="join"  batch-size="10">
+      <!--cacheando -->
+      <cache usage="nonstrict-read-write"/>
+      <!-- id foren key na tab  produto -->
+      <key column="CategoriaId"/>
+      <!-- nome da tabela -->
+      <one-to-many class="Produto"/>
+
+    </bag>
+
+  </class>
+</hibernate-mapping>

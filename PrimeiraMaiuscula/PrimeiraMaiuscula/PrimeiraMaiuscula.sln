@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimeiraMaiuscula", "PrimeiraMaiuscula\PrimeiraMaiuscula.csproj", "{D1BB99F4-DA0C-4FB3-A4F1-06B46DCC11CB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Teste", "Teste", "{BF1359C8-1CF4-4D4B-9AFA-6810452DC019}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpressaoRegular", "ExpressaoRegular\ExpressaoRegular.csproj", "{EA5E2D4A-A02F-4434-963B-7C93D2A8C154}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1BB99F4-DA0C-4FB3-A4F1-06B46DCC11CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1BB99F4-DA0C-4FB3-A4F1-06B46DCC11CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1BB99F4-DA0C-4FB3-A4F1-06B46DCC11CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1BB99F4-DA0C-4FB3-A4F1-06B46DCC11CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA5E2D4A-A02F-4434-963B-7C93D2A8C154}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA5E2D4A-A02F-4434-963B-7C93D2A8C154}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA5E2D4A-A02F-4434-963B-7C93D2A8C154}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA5E2D4A-A02F-4434-963B-7C93D2A8C154}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EA5E2D4A-A02F-4434-963B-7C93D2A8C154} = {BF1359C8-1CF4-4D4B-9AFA-6810452DC019}
+	EndGlobalSection
+EndGlobal

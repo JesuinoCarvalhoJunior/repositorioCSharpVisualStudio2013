@@ -1,0 +1,17 @@
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <class xmlns="urn:nhibernate-mapping-2.2" name="ProjetoFluentNHibernate.Entidades.Telefone, ProjetoFluentNHibernate, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="`Telefone`">
+    <id name="Codigo" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="Codigo" />
+      <generator class="identity" />
+    </id>
+    <property name="CodigoDdd" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="CodigoDdd" length="11" not-null="true" />
+    </property>
+    <property name="Numero" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="Numero" not-null="true" />
+    </property>
+    <many-to-one class="ProjetoFluentNHibernate.Entidades.Pessoa, ProjetoFluentNHibernate, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Pessoa">
+      <column name="Pessoa_id" />
+    </many-to-one>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Loja"
+                   namespace="Loja.Entidades">
+  <class name="Venda">
+    <id name="Id">
+      <generator class="identity"/>
+    </id>
+
+    <!-- relacionamento .. atributo Cliente coluna ClienteId -->
+    <many-to-one name="Cliente" column="ClienteId"/> 
+  
+    <!-- mapeando lista-->
+    <bag name="Produtos" table="Vendas_Produtos">
+      <key column="VendaId" />
+      <many-to-many column="ProdutoId" class="Produto"/>
+    </bag>
+    
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Loja"
+                   namespace="Loja.Entidades">
+  <class name="Usuario" abstract="true">
+    <!--cacheando-->
+    <cache usage="nonstrict-read-write" />
+    <id name="Id">
+      <generator class="identity"/>
+    </id>
+    <!-- mapeando  numa unica tabela - heranca Usuario / PessoaFisica / PessoaJuridica -->
+    <!-- System.String é do proprio C# -->
+    <discriminator column="Tipo" type="System.String"/>
+
+    <property name="Nome"/>
+
+    <!--mapeando subclasse-->
+    <subclass name="PessoaFisica">
+      <property name="CPF"/>
+    </subclass>
+
+    <subclass name="PessoaJuridica">
+      <property name="CNPJ"/>
+    </subclass>
+
+  </class>
+</hibernate-mapping>

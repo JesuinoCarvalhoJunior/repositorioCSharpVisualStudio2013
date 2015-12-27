@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ProjetoFluentNHibernate.Entidades.Pessoa" Collapsed="true">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEgSAAAAAEAABQAAAAAAAAAAAAAAAAAAEAEAA=</HashCode>
+      <FileName>Entidades\Pessoa.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjetoFluentNHibernate.Entidades.PessoaJuridica">
+    <Position X="5.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entidades\PessoaJuridica.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjetoFluentNHibernate.Entidades.Telefone">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAQAAAAABAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Entidades\Telefone.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjetoFluentNHibernate.Entidades.Departamento">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQABAAAAAAAQAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Entidades\Departamento.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjetoFluentNHibernate.Entidades.Grupo">
+    <Position X="7.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAQABAAAAAAAQAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Entidades\Grupo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjetoFluentNHibernate.Entidades.PessoaFisica">
+    <Position X="3.75" Y="2.5" Width="1.5" />
+    <InheritanceLine Type="ProjetoFluentNHibernate.Entidades.Pessoa" FixedToPoint="true">
+      <Path>
+        <Point X="5.25" Y="1.062" />
+        <Point X="5.25" Y="2.125" />
+        <Point X="4.5" Y="2.125" />
+        <Point X="4.5" Y="2.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABACAAAA=</HashCode>
+      <FileName>Entidades\PessoaFisica.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="ProjetoFluentNHibernate.Entidades.Status">
+    <Position X="9" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIEAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entidades\Status.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,44 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="ArqTransfer.WebForms.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head id="Head1" runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="Form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server" >
+    </asp:ScriptManager>
+    <div class="page">
+        <div class="header">
+            <div class="title">
+                <h1>
+                    File Transfer - Application
+                </h1>
+            </div>
+            <div class="loginDisplay">
+                <asp:Label ID="lblLoginName" runat="server"></asp:Label>
+                <asp:LinkButton ID="btnLogout" runat="server" Text="Logout" 
+                    onclick="btnLogout_Click"></asp:LinkButton>
+            </div>
+            <div class="clear hideSkiplink">
+                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                <ContentTemplate>
+                    <h2><asp:Label ID="lblPasta" runat="server" Text="Login"></asp:Label></h2>
+                </ContentTemplate>
+                </asp:UpdatePanel>	
+            </div>
+        </div>
+        <div class="main">        
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        Rodrigo Sendin - .NET Magazine - DevMedia
+    </div>
+    </form>
+</body>
+</html>

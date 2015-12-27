@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Interface Name="ArqTransfer.Dominio.Repositorios.IRepositorio&lt;T&gt;">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAACAAAAAAAAAAAAABAAAABAAAAAAAA=</HashCode>
+      <FileName>Repositorios\IRepositorio.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ArqTransfer.Dominio.Repositorios.IUsuarioRepositorio">
+    <Position X="0.75" Y="3" Width="1.75" />
+    <InheritanceLine Type="ArqTransfer.Dominio.Repositorios.IRepositorio&lt;T&gt;" FixedFromPoint="true">
+      <Path>
+        <Point X="3.188" Y="2.18" />
+        <Point X="3.188" Y="2.625" />
+        <Point X="1.625" Y="2.625" />
+        <Point X="1.625" Y="3" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Repositorios\IUsuarioRepositorio.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ArqTransfer.Dominio.Repositorios.IPastaRepositorio">
+    <Position X="3" Y="3" Width="2" />
+    <InheritanceLine Type="ArqTransfer.Dominio.Repositorios.IRepositorio&lt;T&gt;" FixedToPoint="true">
+      <Path>
+        <Point X="3.75" Y="2.18" />
+        <Point X="3.75" Y="3" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositorios\IPastaRepositorio.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ArqTransfer.Dominio.Repositorios.IPermissaoRepositorio">
+    <Position X="5.5" Y="1.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Repositorios\IPermissaoRepositorio.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

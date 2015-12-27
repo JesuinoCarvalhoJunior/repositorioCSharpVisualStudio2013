@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DA5F5C74-43A3-4ABE-BB6B-EBA2164B7B66}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CursoCSharpModuloII.ADONET</RootNamespace>
+    <AssemblyName>CursoCSharpModuloII.ADONET</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v14.1.Core, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v14.1.Core, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dados\ProdutoDao.cs" />
+    <Compile Include="Dados\CategoriaDao.cs" />
+    <Compile Include="Helpers\AtualizarDataGridViewHelper.cs" />
+    <Compile Include="Helpers\DbHelper.cs" />
+    <Compile Include="DB_EXERCICIO_MODII_CATEGORIA_PRODUTODataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_EXERCICIO_MODII_CATEGORIA_PRODUTODataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dominio\Categoria.cs" />
+    <Compile Include="Dominio\Produto.cs" />
+    <Compile Include="Helpers\PreencherComboBoxHelper.cs" />
+    <Compile Include="View\FormCadCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormCadCategoria.Designer.cs">
+      <DependentUpon>FormCadCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormCadProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormCadProduto.Designer.cs">
+      <DependentUpon>FormCadProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormExemplo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormExemplo.Designer.cs">
+      <DependentUpon>FormExemplo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormPrincipal.Designer.cs">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\RetornaProximoCodigoHelper.cs" />
+    <Compile Include="Helpers\SomenteNumerosHelper.cs" />
+    <EmbeddedResource Include="View\FormCadCategoria.resx">
+      <DependentUpon>FormCadCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormCadProduto.resx">
+      <DependentUpon>FormCadProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormExemplo.resx">
+      <DependentUpon>FormExemplo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormPrincipal.resx">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="DB_EXERCICIO_MODII_CATEGORIA_PRODUTODataSet1.xsc">
+      <DependentUpon>DB_EXERCICIO_MODII_CATEGORIA_PRODUTODataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DB_EXERCICIO_MODII_CATEGORIA_PRODUTODataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DB_EXERCICIO_MODII_CATEGORIA_PRODUTODataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB_EXERCICIO_MODII_CATEGORIA_PRODUTODataSet1.xss">
+      <DependentUpon>DB_EXERCICIO_MODII_CATEGORIA_PRODUTODataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DB\" />
+    <Folder Include="Servico\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

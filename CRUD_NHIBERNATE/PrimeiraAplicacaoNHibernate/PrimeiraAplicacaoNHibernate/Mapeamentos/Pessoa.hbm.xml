@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                assembly="PrimeraAplicacaoNHibernate"
+               namespace="PrimeraAplicacaoNHibernate.Dominio">
+
+  <class name="Pessoa" table="pessoa">
+    <id name="Id">
+      <generator class="guid" />
+    </id>
+    
+    <property name="Nome" />
+    <property name="SobreNome" />
+    <property name="Sexo" />
+    <property name="DataNascimento" />
+
+    <many-to-one name="Categoria" 
+                class="PrimeraAplicacaoNHibernate.Dominio.Categoria" 
+               column="categoria_id" cascade="none"/>
+
+  </class>
+</hibernate-mapping>

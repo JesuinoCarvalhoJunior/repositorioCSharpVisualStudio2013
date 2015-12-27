@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ArqTransfer.Dominio", "ArqTransfer.Dominio", "{DF5AEB11-8D07-4FDA-A87A-E1EC885C8823}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArqTransfer.Dominio", "ArqTransfer.Dominio\ArqTransfer.Dominio.csproj", "{916ADD6A-94FB-497F-A67A-4631C8F1BC34}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ArqTransfer.Repositorio", "ArqTransfer.Repositorio", "{C2FC1E6A-5D15-48FD-ABDD-1AC6B8324591}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArqTransfer.Repositorio", "ArqTransfer.Repositorio\ArqTransfer.Repositorio.csproj", "{F48A2BDC-86DD-4862-ACD9-68734B9324BA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ArqTransfer.WebForms", "ArqTransfer.WebForms", "{69E8EEAB-BA03-4B8E-BBE7-D4D51A0A3BF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArqTransfer.WebForms", "ArqTransfer.WebForms\ArqTransfer.WebForms\ArqTransfer.WebForms.csproj", "{CDD08CAD-C38B-415F-916B-5C96833FEB64}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{916ADD6A-94FB-497F-A67A-4631C8F1BC34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{916ADD6A-94FB-497F-A67A-4631C8F1BC34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{916ADD6A-94FB-497F-A67A-4631C8F1BC34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{916ADD6A-94FB-497F-A67A-4631C8F1BC34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F48A2BDC-86DD-4862-ACD9-68734B9324BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F48A2BDC-86DD-4862-ACD9-68734B9324BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F48A2BDC-86DD-4862-ACD9-68734B9324BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F48A2BDC-86DD-4862-ACD9-68734B9324BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDD08CAD-C38B-415F-916B-5C96833FEB64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDD08CAD-C38B-415F-916B-5C96833FEB64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDD08CAD-C38B-415F-916B-5C96833FEB64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDD08CAD-C38B-415F-916B-5C96833FEB64}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{916ADD6A-94FB-497F-A67A-4631C8F1BC34} = {DF5AEB11-8D07-4FDA-A87A-E1EC885C8823}
+		{F48A2BDC-86DD-4862-ACD9-68734B9324BA} = {C2FC1E6A-5D15-48FD-ABDD-1AC6B8324591}
+		{CDD08CAD-C38B-415F-916B-5C96833FEB64} = {69E8EEAB-BA03-4B8E-BBE7-D4D51A0A3BF9}
+	EndGlobalSection
+EndGlobal

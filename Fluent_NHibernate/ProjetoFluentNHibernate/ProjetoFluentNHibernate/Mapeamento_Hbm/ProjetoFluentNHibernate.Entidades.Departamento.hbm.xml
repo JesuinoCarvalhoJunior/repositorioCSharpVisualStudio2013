@@ -1,0 +1,23 @@
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <class xmlns="urn:nhibernate-mapping-2.2" name="ProjetoFluentNHibernate.Entidades.Departamento, ProjetoFluentNHibernate, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="`Departamento`">
+    <id name="Codigo" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="Codigo" />
+      <generator class="identity" />
+    </id>
+    <bag name="Pessoas">
+      <key>
+        <column name="Departamento_id" />
+      </key>
+      <one-to-many class="ProjetoFluentNHibernate.Entidades.Pessoa, ProjetoFluentNHibernate, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+    </bag>
+    <property name="Nome" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="Nome" length="80" not-null="true" />
+    </property>
+    <property name="Descricao" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="Descricao" length="100" />
+    </property>
+    <property name="DataCadastro" type="System.DateTime, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="DataCadastro" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

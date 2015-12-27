@@ -1,0 +1,35 @@
+﻿<?xml version="1.0"?>
+<hibernate-configuration xmlns="urn:nhibernate-configuration-2.2">
+  <session-factory>
+
+    <!-- configurations -->
+    <property name="show_sql">
+      true
+    </property>
+    <property name="connection.provider">
+      NHibernate.Connection.DriverConnectionProvider
+    </property>
+    <property name="dialect">
+      NHibernate.Dialect.MsSql2012Dialect
+    </property>
+    <property name="connection.driver_class">
+      NHibernate.Driver.SqlClientDriver
+    </property>
+    <property name="connection.connection_string">
+      Server=localhost; Initial Catalog=ArqTransfer;Integrated Security=True;
+    </property>
+    <!-- mapping
+    <property name="proxyfactory.factory_class">
+      NHibernate.ByteCode.LinFu.ProxyFactoryFactory, NHibernate.ByteCode.LinFu
+    </property>
+    
+ files -->
+<!--
+    <mapping resource="ArqTransfer.Repositorio.Mapeamentos" assembly="ArqTransfer.Repositorio" />
+  -->
+
+    <!-- <mapping resource="ArqTransfer.Repositorio.Mapeamentos.Pasta.hbm.xml" assembly="ArqTransfer.Repositorio" /> -->
+    <!--  <mapping resource="ArqTransfer.Repositorio.Mapeamentos.Permissao.hbm.xml" assembly="ArqTransfer.Repositorio" /> -->
+
+  </session-factory>
+</hibernate-configuration>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="BancoDeDadosAplicacaoDataSet" targetNamespace="http://tempuri.org/BancoDeDadosAplicacaoDataSet.xsd" xmlns:mstns="http://tempuri.org/BancoDeDadosAplicacaoDataSet.xsd" xmlns="http://tempuri.org/BancoDeDadosAplicacaoDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BancoDeDadosAplicacaoConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BancoDeDadosAplicacaoConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.PrimeraAplicacaoNHibernate.Properties.Settings.GlobalReference.Default.BancoDeDadosAplicacaoConnectionString" Provider="Microsoft.SqlServerCe.Client.3.5" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="BancoDeDadosAplicacaoDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="BancoDeDadosAplicacaoDataSet" msprop:Generator_DataSetName="BancoDeDadosAplicacaoDataSet" msprop:EnableTableAdapterManager="True">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
