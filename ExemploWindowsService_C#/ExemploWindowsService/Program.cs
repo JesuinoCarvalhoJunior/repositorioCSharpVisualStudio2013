@@ -17,7 +17,7 @@ namespace ExemploWindowsService
             };
             ServiceBase.Run(ServicesToRun);
             //
-/*            hhhh
+/*           
 ///     
 #else
            
