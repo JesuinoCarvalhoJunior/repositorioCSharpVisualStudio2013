@@ -10,6 +10,7 @@ using System.Runtime.CompilerServices;
 using System.ServiceProcess;
 using System.Text;
 using System.Threading;
+using MySql.Data.MySqlClient;
 
 namespace ExemploWindowsService
 {
@@ -35,7 +36,8 @@ namespace ExemploWindowsService
             //Instancie a variável criada, que receberá como parâmetro o caminho de meu arquivo de texto,
             //que será o log destes eventos do meu serviço, e o parâmetro encoding com o valor true.
 
-            arquivoLog = new StreamWriter(@"E:\ExemploWindowsService_C#\ExemploWindowsService\Log\Log.txt", true);
+            //    arquivoLog = new StreamWriter(@"E:\ExemploWindowsService_C#\ExemploWindowsService\Log\Log.txt", true);
+            arquivoLog = new StreamWriter(@"C:\Aprendendo_C#\ExemploWindowsService_C#\ExemploWindowsService\Log", true);
 
             //Escrevo no arquivo texto no momento que o arquivo for iniciado
             arquivoLog.Write("Serviço iniciado em: " + DateTime.Now);
@@ -45,7 +47,7 @@ namespace ExemploWindowsService
 
             //Limpo o buffer com o método Flush
             arquivoLog.Flush();
-        
+
 
         }
 
@@ -68,9 +70,18 @@ namespace ExemploWindowsService
 
         public void EnviarEmailPendente()
         {
+
             while (true)
             {
                 Thread.Sleep(5000);
+
+                MySqlConnection conmysql = new MySqlConnection(@"server=localhost; User Id=root; database=bdwebservice; password=root");
+                MySqlCommand comando = new MySqlCommand("SELECT * FROM USUARIO WHERE nome = 'yuri' ", conmysql);
+
+                conmysql.Open();
+
+                MySqlDataReader myreader = comando.ExecuteReader();
+
 
                 SqlConnection conexao = new SqlConnection(@"Data Source=JRCARVALHOVAIO\SQLEXPRESS;Initial Catalog=DB_EXERCICIO_MODII_CATEGORIA_PRODUTO;Integrated Security=True");
                 SqlCommand cmd = new SqlCommand("select top 100 * from enviaremail where status = 'N' ", conexao);
@@ -103,12 +114,12 @@ namespace ExemploWindowsService
 
             MailMessage mensagem = new MailMessage(origem, destino);
 
-           MailMessage priori = new MailMessage(); 
-           priori.Priority = MailPriority.High;
+            MailMessage priori = new MailMessage();
+            priori.Priority = MailPriority.High;
 
             MailMessage encode = new MailMessage();
             encode.BodyEncoding = Encoding.GetEncoding("UTF-8");
-            
+
             mensagem.Subject = assunto;
             mensagem.Body = mensagemEmail;
 
@@ -139,6 +150,17 @@ namespace ExemploWindowsService
             cmdUpdate.ExecuteNonQuery();
             conexao.Close();
 
+
+            MySqlConnection conmysql = new MySqlConnection(@"server=localhost; User Id=root; database=bdwebservice; password=root");
+            MySqlCommand upCommand = new MySqlCommand("Update USUARIO set Login = 'yuri' WHERE id=@id ", conmysql);
+
+
+            upCommand.Parameters.Add(new MySqlParameter("@id", id));
+
+            conmysql.Open();
+            upCommand.ExecuteNonQuery();
+            conmysql.Close();
+        
         }
 
     }
